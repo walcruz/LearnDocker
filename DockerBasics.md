@@ -1,8 +1,8 @@
-# **Aca voy a colocar comando basicos de Docker, explicacion y ejemplos.**
-# **Here i put basic commands of Docker, explain and examples.**
-###**CT**=contenedor/container
+## **Aca voy a colocar comando basicos de Docker, explicacion y ejemplos.**
+## **Here i put basic commands of Docker, explain and examples.**
+### **CT**=contenedor/container
 
-###**Encender/Start CT**
+### **Encender/Start CT**
 
 ´docker run -it --name “name” “image” “comando(/bin/bash o apache2)”´
 
