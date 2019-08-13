@@ -6,7 +6,7 @@
 
 **Encender/Start CT** 
 
-``` docker run -it --name “name” “image” “comando(/bin/bash o apache2)” ``` 
+``` docker run -it --name ct_name img_name -C bash “comando(/bin/bash o apache2)” ``` 
 
 **List CT + state / Lista CT + estado** 
 
@@ -18,11 +18,11 @@
 
 **Find Images hub.docker.com / Busca Imagenes en hub.docker.com**
 
-```docker search “name”```
+```docker search img_name```
 
 **Download image / Descarga Imagen**
 
-```docker pull “name"```
+```docker pull img_name```
 
 **To upload images, logging, tag and push / subir imagenes propias, loguear, taguear y pushear**
 
@@ -32,35 +32,48 @@ docker tag “image” “user/image”
 docker push “user/image”
 ```
 
-
 **CT confing /configuración**
 
-```docker inspect “CT”```
+```docker inspect ct_name```
 
 **CT remove / borrar**
 
-```docker rm “name or id”```
+```docker rm ct_name or ct_id```
 
+**Last/ultimo syslog**
 
-docker logs “nombre” #trae el ultimo log del comando ejecutado”
-docker logs -f “nombre” #lo mantiene como watch
+```docker logs ct_name```
 
-docker top “nombre” #trae el top del docker
+**-f watch/mirando**
 
-docker exec -it web bash -c "apt update && apt install nano"  # ejecuta comando en el docker utilizar bash -c para q sepa el como o desde donde.
+```docker logs -f ct_name```
 
+**top of CT - Running Processes / Procesos corriendo**
 
- docker exec -it web bash    #entramos al docker
+```docker top ct_name```
 
-montar volumen como contenedor:
-docker run -it -v /home/f3nr1r/carpeta:/var/www/html debian bash
-	Editas desde tu pc y se cambia en el ct.
-podes usarlo tmb para logs
-se puede poner solo lectura
+**run command in CT whit bash / coore el comando en CT con bash**
 
-creamos un contenedor al que le atachamos un volumen como referencia para crear un contenedor con los volumenes creados en el anterior, COMO UN INDICE PONELE
+```docker exec -it ct_name bash -c "apt update && apt install vim"```
 
-docker run -it -v /tmp:/var/www/html --name container_code debian /bin/false
+**enter CT / entrar al CT**
 
-docker run -it --name code -h code --volumes-from ec346a2d16cb debian bash
+```docker exec -it web bash```
+
+**mount volumme in CT / montar volumen en CT**
+
+```docker run -it -v /home/f3nr1r/carpeta:/var/www/html ct_name bash```
+
+This allows editing from the host and is changed in th CT
+It can be read-only.
+
+Esto permite editar desde el host y se cambia en el CT.
+se puede poner solo lectura.
+
+**example of mount whit name of volumme / ejemplo de montar con nombre de volumen**
+#--volumes-from 
+
+```docker run -it -v /tmp:/var/www/html --name container-ct debian /bin/false```
+
+```docker run -it --name code -h code --volumes-from container-ct ct_name bash```
 
