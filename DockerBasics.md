@@ -26,11 +26,11 @@
 
 **To upload images, logging, tag and push / subir imagenes propias, loguear, taguear y pushear**
 
-```docker login```
-
-```docker tag “image” “user/image”```
-
-```docker push “user/image”```
+```
+docker login
+docker tag “image” “user/image”
+docker push “user/image”
+```
 
 
 **CT confing /configuración**
