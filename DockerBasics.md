@@ -5,29 +5,40 @@
 ### **Commands and examples / Comandos y ejemplos** 
 
 **Encender/Start CT** 
+
 ``` docker run -it --name “name” “image” “comando(/bin/bash o apache2)” ``` 
 
 **List CT + state / Lista CT + estado** 
+
 ```docker ps -a```
 
 **List Images in host / Lista imagenes en host** 
+
 ``` docker images ```
 
 **Find Images hub.docker.com / Busca Imagenes en hub.docker.com**
+
 ```docker search “name”```
 
 **Download image / Descarga Imagen**
+
 ```docker pull “name"```
 
 **To upload images, logging, tag and push / subir imagenes propias, loguear, taguear y pushear**
+
 ```docker login```
+
 ```docker tag “image” “user/image”```
+
 ```docker push “user/image”```
 
+
 **CT confing /configuración**
+
 ```docker inspect “CT”```
 
 **CT remove / borrar**
+
 ```docker rm “name or id”```
 
 
