@@ -2,25 +2,33 @@
 ## **Here i put basic commands of Docker, explain and examples.**
 ### **CT**=contenedor/container
 
-### **Encender/Start CT**
+### **Commands and examples / Comandos y ejemplos** 
 
-``` docker run -it --name “name” “image” “comando(/bin/bash o apache2)” ```
+**Encender/Start CT** 
+``` docker run -it --name “name” “image” “comando(/bin/bash o apache2)” ``` 
 
-docker ps -a  #docker corriendo
-docker images #lista imagenes
-docker search “nombre” #busca imagenes
+**List CT + state / Lista CT + estado** 
+```docker ps -a```
 
-docker pull “nombre  #trae imagenes
-# para subir imagenes propias, loguear, taguear y pushear
+**List Images in host / Lista imagenes en host** 
+``` docker images ```
 
-docker login
-docker tag “imagen” “nonmbre/imagen”
-docker push “nombre/imagen”
+**Find Images hub.docker.com / Busca Imagenes en hub.docker.com**
+```docker search “name”```
 
+**Download image / Descarga Imagen**
+```docker pull “name"```
 
+**To upload images, logging, tag and push / subir imagenes propias, loguear, taguear y pushear**
+```docker login```
+```docker tag “image” “user/image”```
+```docker push “user/image”```
 
-docker inspect “nombre” # veo la config completa del docker
-docker rm “nombre o id” #borra dockers
+**CT confing /configuración**
+```docker inspect “CT”```
+
+**CT remove / borrar**
+```docker rm “name or id”```
 
 
 docker logs “nombre” #trae el ultimo log del comando ejecutado”
