@@ -4,7 +4,7 @@
 
 ### **Encender/Start CT**
 
-´docker run -it --name “name” “image” “comando(/bin/bash o apache2)”´
+``` docker run -it --name “name” “image” “comando(/bin/bash o apache2)” ```
 
 docker ps -a  #docker corriendo
 docker images #lista imagenes
