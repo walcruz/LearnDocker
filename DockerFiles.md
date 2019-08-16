@@ -4,6 +4,17 @@ Se utiliza para orquestar CT, es una receta para crear el CT a medida pre-config
 
 Used for orchestrate CT, this is a recipe to create the custom CT.
 
+### Buenas practicas:
+
+Tener una carpeta para el CT donde se encontraran:
+
+**DockerFiles**
+
+**archivos de configuracion de los servicios**
+
+**Configuracion del Supervisor**
+
+
 RUN   --for run commands
 CMD ["/usr/bin/supervisord"]   --commands to init run
 EXPOSE 22 80    --for ports forwarding 
