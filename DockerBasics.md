@@ -8,7 +8,12 @@
 
 ```docker create --name ct_name -h ct_name image```
 
-**Encender/Start CT** 
+**Start-stop CT**
+
+```docker start ct_name```
+```docker stop ct_name```
+
+**Run command/correr comando CT** 
 
 ``` docker run -it --name ct_name img_name -C bash “comando(/bin/bash o apache2)” ``` 
 
