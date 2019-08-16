@@ -4,6 +4,10 @@
 
 ### **Commands and examples / Comandos y ejemplos** 
 
+**Create/crear CT**
+
+```docker create --name ct_name -h ct_name image```
+
 **Encender/Start CT** 
 
 ``` docker run -it --name ct_name img_name -C bash “comando(/bin/bash o apache2)” ``` 
