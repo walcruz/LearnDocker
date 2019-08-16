@@ -63,3 +63,6 @@ EXPOSE 22 80
 #Supervisor --entry point / punto de entrada
 CMD ["/usr/bin/supervisord"]
 ```
+Note: 
+
+command COPY can replace for ADD.
