@@ -16,7 +16,7 @@ Tener una carpeta para el CT donde se encontraran:
 
 ### Build image / construir imagen
 
-```docker build -t wordpress $(pwd)```
+```docker build /path-of-Dockerfile-file/ -t name```
 
 RUN   --for run commands
 CMD ["/usr/bin/supervisord"]   --commands to init run
