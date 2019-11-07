@@ -66,3 +66,21 @@ CMD ["/usr/bin/supervisord"]
 Note: 
 
 command COPY can replace for ADD.
+
+--------------------------------------------------------------------------------------------------
+
+**DockerFiles - LA POSTA C/APACHE**
+
+
+```
+docker build -t wcruz/apache2:1.0 .
+
+docker run -p 80:80 --name servidor_web wcruz/apache2:1.0
+
+```
+
+**Todo muy lindo... aca esta el file. Repo en gitlab.**
+
+```
+https://gitlab.com/wjcruz87/dockerfiles/tree/master/apache2file
+```
