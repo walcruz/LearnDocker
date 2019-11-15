@@ -87,6 +87,6 @@ se puede poner solo lectura.
 
 ```docker run -it --name code -h code --volumes-from container-ct ct_name bash```
 
-**Correr CT con puerto**
+**Correr CT con puerto, levantar website, imagen apache**
 
 ```docker run -dit --name tecmint-web -p 8080:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:2.4```
